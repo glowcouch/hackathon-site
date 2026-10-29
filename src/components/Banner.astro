@@ -1,0 +1,30 @@
+<div class="relative overflow-clip py-24 h-[60vh]">
+  <div class:list={[
+      "absolute",
+       // pin to edges
+       "inset-x-0",
+       // center vertically
+       "top-1/2 -translate-y-1/2",
+       // rotate
+       "-rotate-3",
+       // overscale slightly so it covers everything
+       "scale-110",
+       // scale smaller than parent
+       "h-3/4",
+       // color
+       "bg-primary",
+       // center the content
+       "flex justify-center"
+       ]}>
+    <div class:list={[
+         // scale down so it's the width of the screen
+         "w-[100vw]",
+         // center the content
+         "flex justify-center items-center",
+         ]}>
+      <h1 class="text-[11vw]">
+        my title here!
+      </h1>
+    </div>
+  </div>
+</div>

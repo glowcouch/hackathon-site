@@ -1,5 +1,6 @@
 ---
-import "../assets/style.css";
+import '../assets/style.css';
+import Navbar from '../components/Navbar.astro';
 ---
 
 <!doctype html>
@@ -12,19 +13,8 @@ import "../assets/style.css";
 		<meta name="generator" content={Astro.generator} />
 		<title>TaurangaHackathon</title>
 	</head>
-	<body>
-    <div class="navbar">
-      <a class="btn btn-ghost text-xl">TaurangaHackathon</a>
-    </div>
+	<body class="bg-stripes min-h-dvh">
+    <Navbar />
 		<slot />
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
