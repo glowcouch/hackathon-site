@@ -1,8 +1,21 @@
 {
-  "html": {
-    "experimentalFullSupportEnabled": true,
-    "formatter": {
-      "enabled": true
-    }
-  }
+	"html": {
+		"experimentalFullSupportEnabled": true,
+		"formatter": {
+			"enabled": true
+		}
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
+		}
+	},
+	"vcs": {
+		"enabled": true,
+		"clientKind": "git",
+		"useIgnoreFile": true
+	},
+	"files": {
+		"includes": ["**", "!!public"]
+	}
 }

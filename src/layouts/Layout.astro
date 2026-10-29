@@ -1,6 +1,6 @@
 ---
-import '../assets/style.css';
-import Navbar from '../components/Navbar.astro';
+import "../assets/style.css";
+import Navbar from "../components/Navbar.astro";
 const { description } = Astro.props;
 import fontUrl from "@fontsource-variable/hanken-grotesk/files/hanken-grotesk-latin-wght-normal.woff2?url";
 ---
@@ -8,18 +8,18 @@ import fontUrl from "@fontsource-variable/hanken-grotesk/files/hanken-grotesk-la
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-    <!-- preload hanken grotesk to avoid unstyled flash -->
-    <link rel="preload" as="font" type="font/woff2" href={fontUrl} crossorigin />
-		<meta name="generator" content={Astro.generator} />
-    <title>TaurangaHackathon</title>
-    <meta name="description" content={description} />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+		<link rel="icon" href="/favicon.ico">
+		<!-- preload hanken grotesk to avoid unstyled flash -->
+		<link rel="preload" as="font" type="font/woff2" href={fontUrl} crossorigin>
+		<meta name="generator" content={Astro.generator}>
+		<title>TaurangaHackathon</title>
+		<meta name="description" content={description}>
 	</head>
 	<body class="bg-stripes min-h-dvh">
-    <Navbar />
+		<Navbar />
 		<slot />
 	</body>
 </html>

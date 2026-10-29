@@ -2,72 +2,78 @@
 @import "@fontsource-variable/hanken-grotesk";
 
 @plugin "daisyui" {
-  themes: cute-cool --default;
+	themes: cute-cool --default;
 }
 
 @theme {
-  --font-sans: "Hanken Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
+	--font-sans: "Hanken Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
 }
 
 @plugin "daisyui/theme" {
-  name: "cute-cool";
-  default: true;
-  prefersdark: true;
-  color-scheme: dark;
+	name: "cute-cool";
+	default: true;
+	prefersdark: true;
+	color-scheme: dark;
 
-  /* colors */
-  --color-base-100: oklch(25.33% 0.016 252.42);
-  --color-base-200: oklch(23.26% 0.014 253.1);
-  --color-base-300: oklch(21.15% 0.012 254.09);
-  --color-base-content: oklch(97.807% 0.029 256.847);
-  --color-primary: oklch(0.6391 0.2018 299.5);
-  --color-primary-content: oklch(96% 0.018 272.314);
-  --color-secondary: oklch(0.6391 0.2018 354.31);
-  --color-secondary-content: oklch(94% 0.028 342.258);
-  --color-accent: oklch(0.6391 0.2018 181.912);
-  --color-accent-content: oklch(38% 0.063 188.416);
-  --color-neutral: oklch(14% 0.005 285.823);
-  --color-neutral-content: oklch(92% 0.004 286.32);
-  --color-info: oklch(74% 0.16 232.661);
-  --color-info-content: oklch(29% 0.066 243.157);
-  --color-success: oklch(76% 0.177 163.223);
-  --color-success-content: oklch(37% 0.077 168.94);
-  --color-warning: oklch(82% 0.189 84.429);
-  --color-warning-content: oklch(41% 0.112 45.904);
-  --color-error: oklch(71% 0.194 13.428);
-  --color-error-content: oklch(27% 0.105 12.094);
+	/* colors */
+	--color-base-100: oklch(25.33% 0.016 252.42);
+	--color-base-200: oklch(23.26% 0.014 253.1);
+	--color-base-300: oklch(21.15% 0.012 254.09);
+	--color-base-content: oklch(97.807% 0.029 256.847);
+	--color-primary: oklch(0.6391 0.2018 299.5);
+	--color-primary-content: oklch(96% 0.018 272.314);
+	--color-secondary: oklch(0.6391 0.2018 354.31);
+	--color-secondary-content: oklch(94% 0.028 342.258);
+	--color-accent: oklch(0.6391 0.2018 181.912);
+	--color-accent-content: oklch(38% 0.063 188.416);
+	--color-neutral: oklch(14% 0.005 285.823);
+	--color-neutral-content: oklch(92% 0.004 286.32);
+	--color-info: oklch(74% 0.16 232.661);
+	--color-info-content: oklch(29% 0.066 243.157);
+	--color-success: oklch(76% 0.177 163.223);
+	--color-success-content: oklch(37% 0.077 168.94);
+	--color-warning: oklch(82% 0.189 84.429);
+	--color-warning-content: oklch(41% 0.112 45.904);
+	--color-error: oklch(71% 0.194 13.428);
+	--color-error-content: oklch(27% 0.105 12.094);
 
-  /* radius */
-  --radius-selector: 0.5rem;
-  --radius-field: 0.25rem;
-  --radius-box: 0.5rem;
+	/* radius */
+	--radius-selector: 0.5rem;
+	--radius-field: 0.25rem;
+	--radius-box: 0.5rem;
 
-  /* sizes */
-  --size-selector: 0.25rem;
-  --size-field: 0.25rem;
-  --border: 1px;
+	/* sizes */
+	--size-selector: 0.25rem;
+	--size-field: 0.25rem;
+	--border: 1px;
 
-  /* effects */
-  --depth: 1;
-  --noise: 0;
+	/* effects */
+	--depth: 1;
+	--noise: 0;
 }
 
 @layer base {
-  h1 { @apply text-5xl font-bold; }
-  h2 { @apply text-3xl font-semibold; }
-  h3 { @apply text-xl font-semibold; }
+	h1 {
+		@apply text-5xl font-bold;
+	}
+	h2 {
+		@apply text-3xl font-semibold;
+	}
+	h3 {
+		@apply text-xl font-semibold;
+	}
 }
 
 @utility bg-stripes {
-  background-image: repeating-linear-gradient(
-    -45deg,
-    transparent 0 10px,
-    color-mix(in oklab, var(--color-secondary) 20%, transparent) 10px 12px
-  );
+	background-image: repeating-linear-gradient(
+		-45deg,
+		transparent 0 10px,
+		color-mix(in oklab, var(--color-secondary) 20%, transparent) 10px 12px
+	);
 }
 
 @utility better-glass {
-  backdrop-filter: blur(var(--panel-blur, 2.3px));
-  border: 1px solid oklch(100% 0 0 / 0.1);
-  border-radius: var(--radius-box);
+	backdrop-filter: blur(var(--panel-blur, 2.3px));
+	border: 1px solid oklch(100% 0 0 / 0.1);
+	border-radius: var(--radius-box);
 }
