@@ -52,6 +52,12 @@
   --noise: 0;
 }
 
+@layer base {
+  h1 { @apply text-5xl font-bold; }
+  h2 { @apply text-3xl font-semibold; }
+  h3 { @apply text-xl font-semibold; }
+}
+
 @utility bg-stripes {
   background-image: repeating-linear-gradient(
     -45deg,

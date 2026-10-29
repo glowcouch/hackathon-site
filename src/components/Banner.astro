@@ -1,3 +1,7 @@
+---
+const { heading, subheading } = Astro.props;
+---
+
 <header role="banner">
   <div class="relative overflow-clip py-24 h-[60vh]">
     <div class:list={[
@@ -23,9 +27,14 @@
           // center the content
           "flex justify-center items-center",
           ]}>
-        <h1 class="text-[11vw]">
-          my title here!
-        </h1>
+        <div class="text-center text-shadow-lg">
+          <h1 class="text-[11vw]">
+            {heading}
+          </h1>
+          <h2 class="text-[6vw]">
+            {subheading}
+          </h2>
+        </div>
       </div>
     </div>
   </div>
