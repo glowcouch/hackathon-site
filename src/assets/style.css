@@ -24,7 +24,7 @@
   --color-primary-content: oklch(96% 0.018 272.314);
   --color-secondary: oklch(0.6391 0.2018 354.31);
   --color-secondary-content: oklch(94% 0.028 342.258);
-  --color-accent: oklch(77% 0.152 181.912);
+  --color-accent: oklch(0.6391 0.2018 181.912);
   --color-accent-content: oklch(38% 0.063 188.416);
   --color-neutral: oklch(14% 0.005 285.823);
   --color-neutral-content: oklch(92% 0.004 286.32);
@@ -58,4 +58,10 @@
     transparent 0 10px,
     color-mix(in oklab, var(--color-secondary) 20%, transparent) 10px 12px
   );
+}
+
+@utility better-glass {
+  backdrop-filter: blur(var(--panel-blur, 2.3px));
+  border: 1px solid oklch(100% 0 0 / 0.1);
+  border-radius: var(--radius-box);
 }
