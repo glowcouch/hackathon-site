@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import basestation from "../assets/sponsors/basestation.png";
+import HSection from "../components/HSection.astro";
+
+// [image, name, string]
+const images: [ImageMetadata, string, string][] = [
+	[basestation, "basestation", "invert"],
+	[basestation, "basestation", "invert"],
+	[basestation, "basestation", "invert"],
+	[basestation, "basestation", "invert"],
+	[basestation, "basestation", "invert"],
+	[basestation, "basestation", "invert"],
+	[basestation, "basestation", "invert"],
+	[basestation, "basestation", "invert"],
+];
+---
+
+<HSection title="Sponsors">
+	<div class="grid grid-cols-[repeat(auto-fill,16rem)] justify-center gap-4">
+		{images.map(([image, name, classes], _index) => (
+			<Image src={image} alt={`${name} logo`} class={`${classes}`} />
+		))}
+	</div>
+</HSection>
