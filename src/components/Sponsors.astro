@@ -3,23 +3,24 @@ import { Image } from "astro:assets";
 import basestation from "../assets/sponsors/basestation.png";
 import HSection from "../components/HSection.astro";
 
-// [image, name, string]
-const images: [ImageMetadata, string, string][] = [
-	[basestation, "basestation", "invert"],
-	[basestation, "basestation", "invert"],
-	[basestation, "basestation", "invert"],
-	[basestation, "basestation", "invert"],
-	[basestation, "basestation", "invert"],
-	[basestation, "basestation", "invert"],
-	[basestation, "basestation", "invert"],
-	[basestation, "basestation", "invert"],
+// [image, name, link, class]
+const images: [ImageMetadata, string, string, string][] = [
+	[basestation, "basestation", "https://www.basestation.nz/", "invert"],
+	[basestation, "basestation", "https://www.basestation.nz/", "invert"],
+	[basestation, "basestation", "https://www.basestation.nz/", "invert"],
+	[basestation, "basestation", "https://www.basestation.nz/", "invert"],
+	[basestation, "basestation", "https://www.basestation.nz/", "invert"],
+	[basestation, "basestation", "https://www.basestation.nz/", "invert"],
+	[basestation, "basestation", "https://www.basestation.nz/", "invert"],
 ];
 ---
 
-<HSection title="Sponsors">
+<HSection title="Thanks to our lovely sponsors:">
 	<div class="grid grid-cols-[repeat(auto-fill,16rem)] justify-center gap-4">
-		{images.map(([image, name, classes], _index) => (
-			<Image src={image} alt={`${name} logo`} class={`${classes}`} />
+		{images.map(([image, name, link, classes], _index) => (
+			<a href={link} class="hover-3d">
+				<Image src={image} alt={`${name} logo`} class={`${classes}`} />
+			</a>
 		))}
 	</div>
 </HSection>
