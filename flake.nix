@@ -18,6 +18,8 @@
           packages = with pkgs; [
             bun
           ];
+
+          LD_LIBRARY_PATH = with pkgs; pkgs.lib.makeLibraryPath [ vips stdenv.cc.cc.lib ];
         };
       }
     );
