@@ -1,0 +1,31 @@
+---
+import { Icon } from "astro-icon/components";
+import HSection from "../components/HSection.astro";
+import { event } from "../data/data.ts";
+---
+
+<HSection title="Details">
+	<p>
+		{"Date: "}
+		<span class="text-accent">
+			{event.start.toLocaleDateString("en-NZ", { dateStyle: "full" })}</span
+		>
+	</p>
+	<p>
+		{"Time: "}
+		<span class="text-accent">
+			{event.start.toLocaleTimeString("en-NZ", { timeStyle: "short" })}</span
+		>
+	</p>
+	<br>
+	<p>
+		{"Location: "}
+		<span class="text-accent"> {event.address}</span>
+	</p>
+
+	<br>
+	<a href="/hackathon.ics" download class="btn btn-outline">
+		<Icon name="lucide:calendar" class="size-5" />
+		Add to calendar
+	</a>
+</HSection>

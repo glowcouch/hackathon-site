@@ -1,0 +1,24 @@
+---
+import HSection from "../components/HSection.astro";
+import { event } from "../data/data.ts";
+---
+
+<HSection class="text-center">
+	<p class="text-5xl">
+		Tauranga's
+		<span class="text-accent font-bold"> first </span>
+		youth hackathon!
+	</p>
+	<div class="divider divider-accent" />
+	<br>
+	<p>
+		{`${event.hours} `}
+		hours to Build something your proud of, learn something, meet new people,
+		and have fun.
+	</p>
+	<br>
+	<p>
+		Challenge is revealed on the day 😜
+		<span class="text-muted"> (don't worry it'll be fun!)</span>
+	</p>
+</HSection>

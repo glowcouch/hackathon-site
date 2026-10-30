@@ -7,6 +7,7 @@
 
 @theme {
 	--font-sans: "Hanken Grotesk Variable", ui-sans-serif, system-ui, sans-serif;
+	--color-muted: oklch(70% 0.02 285);
 }
 
 @plugin "daisyui/theme" {
@@ -24,7 +25,7 @@
 	--color-primary-content: oklch(96% 0.018 272.314);
 	--color-secondary: oklch(0.6391 0.2018 354.31);
 	--color-secondary-content: oklch(94% 0.028 342.258);
-	--color-accent: oklch(0.6391 0.2018 181.912);
+	--color-accent: oklch(0.6391 0.2018 9.38);
 	--color-accent-content: oklch(38% 0.063 188.416);
 	--color-neutral: oklch(14% 0.005 285.823);
 	--color-neutral-content: oklch(92% 0.004 286.32);

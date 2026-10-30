@@ -1,6 +1,8 @@
 ---
 import Banner from "../components/Banner.astro";
+import Details from "../components/Details.astro";
 import Sponsors from "../components/Sponsors.astro";
+import Summary from "../components/Summary.astro";
 import Venue from "../components/Venue.astro";
 import Layout from "../layouts/Layout.astro";
 ---
@@ -9,9 +11,11 @@ import Layout from "../layouts/Layout.astro";
 <Layout
 	description="Join us for a weekend of building, learning and fun. See the event details, meet the team and sign up to take part."
 >
-	<Banner heading="TaurangaHack" subheading="Tauanga 12h youth hackathon" />
+	<Banner heading="CoolHacks" subheading="Tauanga youth hackathon" />
 	<main>
+		<Summary />
 		<Sponsors />
+		<Details />
 		<Venue />
 	</main>
 </Layout>
