@@ -1,3 +1,7 @@
+---
+import { event } from "../data/data.ts";
+---
+
 <nav role="navigation">
 	<div class="max-lg:collapse bg-base-300 shadow-sm w-full rounded-md">
 		<input id="navbar-1-toggle" class="peer hidden" type="checkbox">
@@ -33,11 +37,7 @@
 				</ul>
 			</div>
 			<div class="navbar-end">
-				<a
-					class="btn"
-					href="https://glowcouch.github.io/link-shortener/hack/eoi"
-					>Sign Up!</a
-				>
+				<a class="btn" href={event.signUp}>Sign Up!</a>
 			</div>
 		</div>
 

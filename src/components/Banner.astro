@@ -1,5 +1,7 @@
 ---
 const { heading, subheading } = Astro.props;
+
+import { event } from "../data/data.ts";
 ---
 
 <header role="banner">
@@ -39,11 +41,7 @@ const { heading, subheading } = Astro.props;
 						{subheading}
 					</h2>
 					<br>
-					<a
-						class="btn btn-secondary"
-						href="https://glowcouch.github.io/link-shortener/hack/eoi"
-						>Sign Up!</a
-					>
+					<a class="btn btn-secondary" href={event.signUp}>Sign Up!</a>
 				</div>
 			</div>
 		</div>

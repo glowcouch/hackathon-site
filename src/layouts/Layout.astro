@@ -1,8 +1,20 @@
 ---
 import "../assets/style.css";
 import Navbar from "../components/Navbar.astro";
+
 const { description } = Astro.props;
+
 import fontUrl from "@fontsource-variable/hanken-grotesk/files/hanken-grotesk-latin-wght-normal.woff2?url";
+import { event } from "../data/data.ts";
+
+const speculationRules = {
+	prefetch: [
+		{
+			urls: [event.signUp],
+			eagerness: "moderate",
+		},
+	],
+};
 ---
 
 <!doctype html>
@@ -12,11 +24,32 @@ import fontUrl from "@fontsource-variable/hanken-grotesk/files/hanken-grotesk-la
 		<meta name="viewport" content="width=device-width">
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 		<link rel="icon" href="/favicon.ico">
-		<!-- preload hanken grotesk to avoid unstyled flash -->
-		<link rel="preload" as="font" type="font/woff2" href={fontUrl} crossorigin>
 		<meta name="generator" content={Astro.generator}>
 		<title>TaurangaHackathon</title>
 		<meta name="description" content={description}>
+
+		<!-- preload hanken grotesk to avoid unstyled flash -->
+		<link rel="preload" as="font" type="font/woff2" href={fontUrl} crossorigin>
+
+		<!-- try to preload the sign up url so people can access it faster -->
+		<link rel="preconnect" href={event.signUp} as="document">
+		<script
+			type="speculationrules"
+			is:inline
+			set:html={JSON.stringify(speculationRules)}
+		/>
+		<script is:inline define:vars={{ signupUrl: event.signUp }}>
+		// Fallback for browsers without Speculation Rules support
+		if (!HTMLScriptElement.supports?.("speculationrules")) {
+			window.addEventListener("load", () => {
+				const l = document.createElement("link");
+				l.rel = "prefetch";
+				l.href = signupUrl;
+				l.as = "document";
+				document.head.appendChild(l);
+			});
+		}
+		</script>
 	</head>
 	<body class="bg-stripes min-h-dvh">
 		<Navbar />
