@@ -34,14 +34,16 @@ import { event } from "../data/data.ts";
 				]}
 			>
 				<div class="text-center text-shadow-lg">
-					<h1 class="text-[11vw]">
+					<h1 class="text-[11vw] md:text-[11vh]">
 						{heading}
 					</h1>
-					<h2 class="text-[6vw]">
+					<h2 class="text-[6vw] md:text-[6vh]">
 						{subheading}
 					</h2>
 					<br>
-					<a class="btn btn-secondary" href={event.signUp}>Sign Up!</a>
+					<a class="btn btn-secondary lg:btn-xl md:btn-lg" href={event.signUp}
+						>Sign Up!</a
+					>
 				</div>
 			</div>
 		</div>
