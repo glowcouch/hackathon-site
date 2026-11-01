@@ -5,6 +5,7 @@ import Pricing from "../components/Pricing.astro";
 import Sponsors from "../components/Sponsors.astro";
 import Summary from "../components/Summary.astro";
 import Venue from "../components/Venue.astro";
+import { event } from "../data/data.ts";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -12,7 +13,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout
 	description="Join us for a weekend of building, learning and fun. See the event details, meet the team and sign up to take part."
 >
-	<Banner heading="CoolHacks" subheading="Tauranga youth hackathon" />
+	<Banner heading={event.name} subheading="Tauranga youth hackathon" />
 	<main>
 		<Summary />
 		<Sponsors />
