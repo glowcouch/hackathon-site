@@ -1,0 +1,12 @@
+---
+import Team from "../components/Team.astro";
+import { event } from "../data/data.ts";
+import Layout from "../layouts/Layout.astro";
+---
+
+<!-- TODO: CHANGE THIS DESCRIPTION, IT IS OBVIOUSLY LLM WRITTEN -->
+<Layout description={`Meet the ${event.name} team`}>
+	<main>
+		<Team />
+	</main>
+</Layout>
