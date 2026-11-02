@@ -11,13 +11,14 @@ const current = normalise(Astro.url.pathname);
 const isActive = (href: string) => normalise(href) === current;
 ---
 
-<nav role="navigation">
+<nav>
 	<div class="max-lg:collapse bg-base-300 shadow-sm w-full rounded-md">
 		<input id="navbar-1-toggle" class="peer hidden" type="checkbox">
 		<label
 			for="navbar-1-toggle"
 			class="fixed inset-0 hidden max-lg:peer-checked:block"
-		></label>
+			><span class="sr-only">Menu</span></label
+		>
 		<div class="collapse-title navbar">
 			<div class="navbar-start">
 				<label for="navbar-1-toggle" class="btn btn-ghost lg:hidden">

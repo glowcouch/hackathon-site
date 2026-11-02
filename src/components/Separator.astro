@@ -57,11 +57,7 @@ const hideRules = [...new Set(sparkles.map((s) => s.reach))]
 
 <style is:global set:html={hideRules} />
 
-<div
-	role="separator"
-	class="sparkle-divider my-35"
-	style={`height:${HEIGHT}px;color:${COLOR}`}
->
+<div class="sparkle-divider my-35" style={`height:${HEIGHT}px;color:${COLOR}`}>
 	{sparkles.map((s) => (
 		<Icon
 			name={s.icon}
