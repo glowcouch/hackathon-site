@@ -2,6 +2,8 @@
 const { heading, subheading } = Astro.props;
 
 import { event } from "../data/data.ts";
+
+import SparkleBox from "./SparkleBox.astro";
 ---
 
 <header role="banner">
@@ -34,14 +36,16 @@ import { event } from "../data/data.ts";
 				]}
 			>
 				<div class="text-center text-shadow-lg">
-					<h1 class="text-[15vw] lg:text-9xl text-secondary">
-						{heading}
-					</h1>
+					<SparkleBox size="[10em]">
+						<h1 class="text-[15vw] lg:text-9xl text-accent">
+							{heading}
+						</h1>
+					</SparkleBox>
 					<h2 class="text-[5.5vw] lg:text-6xl text-nowrap">
 						{subheading}
 					</h2>
 					<br>
-					<a class="btn btn-secondary lg:btn-xl md:btn-lg" href={event.signUp}
+					<a class="btn btn-accent lg:btn-xl md:btn-lg" href={event.signUp}
 						>Sign Up!</a
 					>
 				</div>

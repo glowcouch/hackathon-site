@@ -1,6 +1,6 @@
 ---
 import Banner from "../components/Banner.astro";
-import Details from "../components/Details.astro";
+import Separator from "../components/Separator.astro";
 import Sponsors from "../components/Sponsors.astro";
 import Summary from "../components/Summary.astro";
 import Venue from "../components/Venue.astro";
@@ -13,9 +13,11 @@ import Layout from "../layouts/Layout.astro";
 	description="Join us for a weekend of building, learning and fun. See the event details, meet the team and sign up to take part."
 >
 	<Banner heading={event.name} subheading="Tauranga's first youth hackathon!" />
-	<main>
+	<main class="px-5 md:px-10 lg:px-30 mt-10">
 		<Summary />
+		<Separator seed={1} />
 		<Sponsors />
+		<Separator seed={2} />
 		<Venue />
 	</main>
 </Layout>
