@@ -9,6 +9,7 @@ export const event = {
 	url: url,
 	uid: "tauranga-hackathon-2027@example.com",
 	address: "148 Durham Street, Tauranga 3110",
+	venue: "Basestation",
 	start: start,
 	end: end,
 	hours: hours,

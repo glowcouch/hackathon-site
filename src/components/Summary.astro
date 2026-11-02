@@ -1,32 +1,64 @@
 ---
+import { Icon } from "astro-icon/components";
 import HSection from "../components/HSection.astro";
 import { event } from "../data/data.ts";
 ---
 
-<HSection class="text-center">
-	<p class="text-5xl">
-		Tauranga's
-		<span class="text-accent font-bold"> first </span>
-		youth hackathon!
-		<br>
-		<span class="text-muted text-4xl">
-			By high-schoolers, for high-schoolers</span
-		>
+<HSection>
+	<p class="text-4xl md:text-5xl lg:text-7xl text-center">
+		Student run, made for high-schoolers
 	</p>
 	<div class="divider divider-accent" />
-	<br>
-	<p>
-		{`${event.hours} `}
-		hours to Build something you're proud of, learn something, meet new people,
-		and have fun.
-	</p>
-	<br>
-	<p>
-		Challenge is revealed on the day 😜
-		<span class="text-muted"> (don't worry it'll be fun!)</span>
-	</p>
-	<br>
-	<p>And it's completely free!</p>
-	<br>
-	<p>Open to ages 13 to 18.</p>
+	<div class="lg:grid lg:grid-cols-2 lg:gap-10">
+		<div>
+			<br>
+			<p>
+				{`${event.hours} `}
+				hours to Make something cool, meet new people, learn something, and have
+				fun.
+			</p>
+			<br>
+			<p>
+				Challenge is revealed on the day 😜
+				<span class=""> (don't worry it'll be fun!)</span>
+			</p>
+			<br>
+			<p>It's completely free! Open to ages 13 to 18.</p>
+			<br>
+			<p>
+				{"Date: "}
+				<span class="text-accent">
+					{event.start.toLocaleDateString("en-NZ", { dateStyle: "full" })}</span
+				>
+			</p>
+			<br>
+			<p>
+				{"Time: "}
+				<span class="text-accent">
+					{event.start.toLocaleTimeString("en-NZ", {
+						timeStyle: "short",
+					})}</span
+				>
+			</p>
+			<br>
+			<p>
+				{"Location: "}
+				<span class="text-accent"> {event.address}</span>
+			</p>
+			<br>
+
+			<br>
+			<a href="/hackathon.ics" download class="btn btn-xl btn-outline">
+				<Icon name="lucide:calendar" class="size-5" />
+				Add to calendar
+			</a>
+		</div>
+		<div class="h-full w-full my-10 lg:my-0">
+			<img
+				src="https://placehold.co/600x400?text=A+sunny+photo+of+the+organizers+coding+at+the+venue"
+				alt={`A photo of teens coding at ${event.venue}`}
+				class="w-full h-full object-cover object-[50%_20%]"
+			>
+		</div>
+	</div>
 </HSection>

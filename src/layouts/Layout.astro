@@ -2,7 +2,7 @@
 import "../assets/style.css";
 import Navbar from "../components/Navbar.astro";
 
-const { description } = Astro.props;
+const { description, classes } = Astro.props;
 
 import fontUrl from "@fontsource-variable/hanken-grotesk/files/hanken-grotesk-latin-wght-normal.woff2?url";
 import { event } from "../data/data.ts";
@@ -51,7 +51,7 @@ const speculationRules = {
 		}
 		</script>
 	</head>
-	<body class="bg-stripes min-h-dvh">
+	<body class={`min-h-dvh bg-base-200 ${classes}`}>
 		<Navbar />
 		<slot />
 	</body>

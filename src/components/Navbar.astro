@@ -37,15 +37,15 @@ const isActive = (href: string) => normalise(href) === current;
 						/>
 					</svg>
 				</label>
-				<a class="btn btn-ghost text-xl" href="/">MyCoolLogo</a>
+				<a class="btn btn-ghost text-4xl" href="/">MyCoolLogo</a>
 			</div>
 			<div class="navbar-center hidden lg:flex">
 				<ul class="menu menu-horizontal px-1">
 					{links.map((link) => (
-						<li>
+						<li class="text-3xl">
 							<a
 								href={link.href}
-								class:list={[{ "text-accent": isActive(link.href) }]}
+								class:list={[{ "text-accent text-2xl": isActive(link.href) }]}
 								aria-current={isActive(link.href) ? "page" : undefined}
 							>
 								{link.label}
@@ -54,15 +54,13 @@ const isActive = (href: string) => normalise(href) === current;
 					))}
 				</ul>
 			</div>
-			<div class="navbar-end">
-				<a class="btn" href={event.signUp}>Sign Up!</a>
-			</div>
+			<div class="navbar-end"></div>
 		</div>
 
 		<div class="collapse-content lg:hidden z-1">
 			<ul class="menu">
 				{links.map((link) => (
-					<li>
+					<li class="text-3xl">
 						<a
 							href={link.href}
 							class:list={[{ "text-accent": isActive(link.href) }]}
