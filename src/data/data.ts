@@ -23,4 +23,5 @@ export const contact = {
 	discord: `${event.name.toLowerCase()}`,
 	discord_id: "TODO",
 	instagram: `@${event.name.toLowerCase()}`,
+	github: `${event.name.toLowerCase()}`,
 };
