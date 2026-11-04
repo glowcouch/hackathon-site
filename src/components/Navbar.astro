@@ -3,10 +3,6 @@ import { Icon } from "astro-icon/components";
 import { event } from "../data/data.ts";
 
 const links = [{ href: "/contact", label: "Contact & FAQ" }];
-
-const normalise = (p: string) => p.replace(/\/+$/, "") || "/";
-const current = normalise(Astro.url.pathname);
-const isActive = (href: string) => normalise(href) === current;
 ---
 
 <nav>
@@ -35,6 +31,7 @@ const isActive = (href: string) => normalise(href) === current;
 							d="M4 6h16M4 12h8m-8 6h16"
 						/>
 					</svg>
+					<span class="sr-only">Open menu</span>
 				</label>
 				<a class="btn btn-ghost text-4xl text-accent font-mono" href="/">
 					<Icon name="logo" class="mr-4"></Icon>
@@ -59,7 +56,7 @@ const isActive = (href: string) => normalise(href) === current;
 			<ul class="menu">
 				{links.map((link) => (
 					<li class="text-2xl">
-						<a href={link.href} class="btn btn-ghost">
+						<a href={link.href} aria-label={link.label} class="btn btn-ghost">
 							{link.label}
 						</a>
 					</li>
