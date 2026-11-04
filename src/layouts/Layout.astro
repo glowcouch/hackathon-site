@@ -1,5 +1,6 @@
 ---
 import "../assets/style.css";
+import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 
 const { description, classes } = Astro.props;
@@ -63,5 +64,6 @@ const speculationRules = {
 	<body class={`min-h-dvh bg-base-100 ${classes}`}>
 		<Navbar />
 		<slot />
+		<Footer />
 	</body>
 </html>
