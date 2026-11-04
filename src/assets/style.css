@@ -1,6 +1,15 @@
 @import "tailwindcss";
 @import "@fontsource-variable/hanken-grotesk";
 
+@font-face {
+	font-family: "Hanken Grotesk Variable";
+	font-style: normal;
+	font-display: block;
+	font-weight: 100 900;
+	src: url("@fontsource-variable/hanken-grotesk/files/hanken-grotesk-latin-wght-normal.woff2")
+		format("woff2-variations");
+}
+
 @plugin "daisyui" {
 	themes: cute-cool --default;
 }
