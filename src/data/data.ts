@@ -14,5 +14,5 @@ export const event = {
 	end: end,
 	hours: hours,
 	description: `${hours} hours of youth hacking. More details at ${url}`,
-	signUp: "https://forms.fillout.com/t/5zLqqWJq3uus",
+	signUp: "https://forms.fillout.com/t/sdomEGAG6hus",
 };
