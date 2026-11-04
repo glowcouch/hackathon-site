@@ -5,9 +5,7 @@ import { Icon } from "astro-icon/components";
 // ---- tuning ----
 const ICON = "logo";
 const SPACING = 300; // px between sparkles
-const HEIGHT = 16; // px
 const SIZE = 100; // px
-const COLOR = "var(--color-accent)"; // any CSS color
 // ----------------
 
 // left, center, right; only the center one shows below md
@@ -17,7 +15,7 @@ const offsets = [-1, 0, 1].map((pos) => ({
 }));
 ---
 
-<div class="relative w-full my-35" style={`height:${HEIGHT}px;color:${COLOR}`}>
+<div class="relative w-full h-50 lg:h-70">
 	{offsets.map((o) => (
 		<Icon
 			name={ICON}
