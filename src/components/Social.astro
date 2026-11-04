@@ -1,23 +1,38 @@
 ---
 import { Icon } from "astro-icon/components";
 
-const { icon, handle, subtitle } = Astro.props;
+const { icon, handle, href, subtitle } = Astro.props;
+
+// only use `a` if href is not empty, otherwise just use a div
+// the handle isn't selectable if it is a link, which is bad for things like email
+const Tag = href ? "a" : "div";
+
+// encode using base64 to stop scrapers
 const handle_base64 = btoa(handle);
+const href_base64 = btoa(href);
 ---
 
-<div class="card card-side bg-base-300 hover:bg-base-200 w-full">
+<Tag
+	class="card card-side bg-base-300 hover:bg-base-200 w-full social-link"
+	data-encoded={href_base64}
+	href="loading"
+>
 	<figure class="pl-[24px]">
 		<Icon name={icon} class="size-10 text-primary" />
 	</figure>
 	<div class="card-body">
-		<h2 class="card-title text-2xl social-handle" data-encoded={handle_base64}>
+		<h2
+			class="card-title text-xl md:text-2xl social-handle"
+			data-encoded={handle_base64}
+		>
 			<span class="invisible">loading</span>
 		</h2>
 		<p class="text-lg">{subtitle}</p>
 	</div>
-</div>
+</Tag>
 
 <script>
+// decode handle text
 document
 	.querySelectorAll<HTMLAnchorElement>(".social-handle")
 	.forEach((handle) => {
@@ -25,7 +40,17 @@ document
 		if (!encoded) return;
 
 		console.log(encoded);
-		const handle_decrypted = atob(encoded);
-		handle.textContent = handle_decrypted;
+		const decrypted = atob(encoded);
+		handle.textContent = decrypted;
 	});
+
+// decode link text
+document.querySelectorAll<HTMLAnchorElement>(".social-link").forEach((a) => {
+	const encoded = a.dataset.encoded;
+	if (!encoded) return;
+
+	console.log(encoded);
+	const decrypted = atob(encoded);
+	a.href = decrypted;
+});
 </script>

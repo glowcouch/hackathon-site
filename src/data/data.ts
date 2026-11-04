@@ -20,6 +20,7 @@ export const event = {
 
 export const contact = {
 	email: `hello@${domain}`,
-	discord: `@${event.name}`,
-	instagram: `@${event.name}`,
+	discord: `${event.name.toLowerCase()}`,
+	discord_id: "TODO",
+	instagram: `@${event.name.toLowerCase()}`,
 };

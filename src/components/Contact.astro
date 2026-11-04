@@ -9,11 +9,13 @@ import Social from "./Social.astro";
 	<Social
 		icon="simple-icons:discord"
 		handle={contact.discord}
-		subtitle="DM us on discord"
+		subtitle="DM us on Discord"
+		href=`https://discord.com/users/${contact.discord_id}`
 	/>
 	<Social
 		icon="simple-icons:instagram"
 		handle={contact.instagram}
-		subtitle="DM us on instagram"
+		subtitle="DM us on Instagram"
+		href=`https://ig.me/m/${contact.instagram}`
 	/>
 </div>
