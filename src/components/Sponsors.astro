@@ -6,21 +6,13 @@ import HSection from "../components/HSection.astro";
 // [image, name, link, class]
 const images: [ImageMetadata, string, string, string][] = [
 	[basestation, "basestation", "https://www.basestation.nz/", "invert"],
-	[basestation, "basestation", "https://www.basestation.nz/", "invert"],
-	[basestation, "basestation", "https://www.basestation.nz/", "invert"],
-	[basestation, "basestation", "https://www.basestation.nz/", "invert"],
-	[basestation, "basestation", "https://www.basestation.nz/", "invert"],
-	[basestation, "basestation", "https://www.basestation.nz/", "invert"],
-	[basestation, "basestation", "https://www.basestation.nz/", "invert"],
 ];
 ---
 
 <HSection title="Thanks to our lovely sponsors:">
-	<div
-		class="grid grid-cols-[repeat(auto-fill,16rem)] justify-center gap-30 p-10"
-	>
+	<div class="flex flex-wrap justify-center gap-30 p-10">
 		{images.map(([image, name, link, classes], _index) => (
-			<a href={link} class="hover-3d">
+			<a href={link} class="hover-3d w-64">
 				<Image src={image} alt={`${name} logo`} class={`${classes}`} />
 			</a>
 		))}
