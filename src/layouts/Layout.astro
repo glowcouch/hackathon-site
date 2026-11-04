@@ -4,7 +4,9 @@ import Navbar from "../components/Navbar.astro";
 
 const { description, classes } = Astro.props;
 
-import fontUrl from "@fontsource-variable/hanken-grotesk/files/hanken-grotesk-latin-wght-normal.woff2";
+import geistUrl from "@fontsource-variable/geist-mono/files/geist-mono-latin-wght-normal.woff2";
+import hankenUrl from "@fontsource-variable/hanken-grotesk/files/hanken-grotesk-latin-wght-normal.woff2";
+
 import { event } from "../data/data.ts";
 
 const speculationRules = {
@@ -28,8 +30,15 @@ const speculationRules = {
 		<title>TaurangaHackathon</title>
 		<meta name="description" content={description}>
 
-		<!-- preload hanken grotesk to avoid unstyled flash -->
-		<link rel="preload" as="font" type="font/woff2" href={fontUrl} crossorigin>
+		<!-- preload fonts to avoid unstyled flash -->
+		<link
+			rel="preload"
+			as="font"
+			type="font/woff2"
+			href={hankenUrl}
+			crossorigin
+		>
+		<link rel="preload" as="font" type="font/woff2" href={geistUrl} crossorigin>
 
 		<!-- try to preload the sign up url so people can access it faster -->
 		<link rel="preconnect" href={event.signUp} as="document">
