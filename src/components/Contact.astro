@@ -1,0 +1,19 @@
+---
+import { contact } from "../data/data.ts";
+
+import Social from "./Social.astro";
+---
+
+<div class="grid gap-5 md:col-3">
+	<Social icon="lucide:mail" handle={contact.email} subtitle="email us" />
+	<Social
+		icon="simple-icons:discord"
+		handle={contact.discord}
+		subtitle="DM us on discord"
+	/>
+	<Social
+		icon="simple-icons:instagram"
+		handle={contact.instagram}
+		subtitle="DM us on instagram"
+	/>
+</div>

@@ -1,0 +1,18 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { icon, handle, subtitle } = Astro.props;
+---
+
+<a
+	href="mailto:hello@hackaberry.nz"
+	class="card card-side bg-base-300 hover:bg-base-200 w-full"
+>
+	<figure class="pl-[24px]">
+		<Icon name={icon} class="size-10 text-primary" />
+	</figure>
+	<div class="card-body">
+		<h2 class="card-title text-2xl">{handle}</h2>
+		<p class="text-lg">{subtitle}</p>
+	</div>
+</a>

@@ -1,0 +1,38 @@
+---
+import HSection from "../components/HSection.astro";
+
+const FAQ_GROUP = "faq-accordion";
+
+const FAQS = [
+	{
+		question: "Do I need to know how to code to take part?",
+		answer:
+			"Not at all! Hackaberry is open to complete beginners. There will be mentors to help you learn!",
+	},
+	{
+		question: "Is it really free? What's the catch?",
+		answer:
+			"Yup, completely free! All you need to bring is yourself and a laptop - all thanks to our sponsors.",
+	},
+	{
+		question: "What should I bring on the day?",
+		answer: "Bring a laptop, yourself, and maybe some water.",
+	},
+	{
+		question: "Do I need to come with a team, or can I come solo?",
+		answer: "Either works - we'll help you find a team on the day.",
+	},
+];
+---
+
+<HSection title="FAQs">
+	<div class="grid gap-5">
+		{FAQS.map(({ question, answer }) => (
+			<div class="collapse bg-base-300">
+				<input type="radio" name={FAQ_GROUP} />
+				<div class="collapse-title font-semibold text-xl">{question}</div>
+				<div class="collapse-content text-lg">{answer}</div>
+			</div>
+		))}
+	</div>
+</HSection>

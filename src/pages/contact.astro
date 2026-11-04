@@ -1,0 +1,16 @@
+---
+import Contact from "../components/Contact.astro";
+import Faq from "../components/Faq.astro";
+import Main from "../components/Main.astro";
+import Separator from "../components/Separator.astro";
+import { event } from "../data/data.ts";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout description={`Contact ${event.name}`}>
+	<Main class="py-5 md:py-10 lg:py-30">
+		<Contact />
+		<Separator />
+		<Faq />
+	</Main>
+</Layout>
