@@ -1,46 +1,22 @@
 ---
+import HSection from "../components/HSection.astro";
+import { team } from "../data/team.ts";
 import Profile from "./Profile.astro";
 ---
 
-<div class="flex flex-wrap justify-center gap-5 m-5 md:m-20">
-	<Profile
-		name="Joe"
-		imgsrc="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-		imgalt="a photo of joe"
+<HSection title="Our team:">
+	<div
+		class="carousel carousel-left md:carousel-center space-x-4 h-[90vh] md:h-[70vh] lg:h-[50vh] w-full"
 	>
-		Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti nisi
-		doloremque facilis iusto perspiciatis, ex quia corrupti aut, aperiam
-		quibusdam illo sequi harum eveniet atque adipisci numquam, nam consequuntur
-		molestias.
-	</Profile>
-	<Profile
-		name="Joe"
-		imgsrc="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-		imgalt="a photo of joe"
-	>
-		Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti nisi
-		doloremque facilis iusto perspiciatis, ex quia corrupti aut, aperiam
-		quibusdam illo sequi harum eveniet atque adipisci numquam, nam consequuntur
-		molestias.
-	</Profile>
-	<Profile
-		name="Joe"
-		imgsrc="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-		imgalt="a photo of joe"
-	>
-		Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti nisi
-		doloremque facilis iusto perspiciatis, ex quia corrupti aut, aperiam
-		quibusdam illo sequi harum eveniet atque adipisci numquam, nam consequuntur
-		molestias.
-	</Profile>
-	<Profile
-		name="Joe"
-		imgsrc="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-		imgalt="a photo of joe"
-	>
-		Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti nisi
-		doloremque facilis iusto perspiciatis, ex quia corrupti aut, aperiam
-		quibusdam illo sequi harum eveniet atque adipisci numquam, nam consequuntur
-		molestias.
-	</Profile>
-</div>
+		{team.map((member) => (
+			<Profile
+				name={member.name}
+				imgsrc={member.imgsrc}
+				imgalt={member.name}
+				class="carousel-item w-90/100"
+			>
+				<member.writeup />
+			</Profile>
+		))}
+	</div>
+</HSection>

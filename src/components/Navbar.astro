@@ -1,8 +1,5 @@
 ---
-const links = [
-	{ href: "/team", label: "Meet the Team" },
-	{ href: "/contact", label: "Contact Us" },
-];
+const links = [{ href: "/contact", label: "Contact Us" }];
 
 const normalise = (p: string) => p.replace(/\/+$/, "") || "/";
 const current = normalise(Astro.url.pathname);

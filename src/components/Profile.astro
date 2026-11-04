@@ -1,16 +1,16 @@
 ---
-const { name, imgsrc, imgalt } = Astro.props;
+const { name, imgsrc, imgalt, class: classes } = Astro.props;
 ---
 
-<div class="card bg-base-300 w-full md:w-100 shadow-sm">
-	<figure>
-		<div class="avatar">
-			<div class="">
-				<img src={imgsrc} alt={imgalt}>
-			</div>
-		</div>
+<div class={`card md:card-side bg-base-300 ${classes}`}>
+	<figure class="shrink-0">
+		<img
+			src={imgsrc}
+			alt={imgalt}
+			class="aspect-[4/3] w-full object-cover md:aspect-square lg:h-full"
+		>
 	</figure>
-	<div class="card-body text-3xl">
+	<div class="card-body text-2xl">
 		<h2 class="card-title text-4xl">{name}</h2>
 		<slot />
 	</div>
