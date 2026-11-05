@@ -1,5 +1,6 @@
 ---
 import { Picture } from "astro:assets";
+import { Icon } from "astro-icon/components";
 import basestation from "../assets/sponsors/basestation.png";
 import HSection from "../components/HSection.astro";
 
@@ -12,19 +13,31 @@ const images: [ImageMetadata, string, string, string][] = [
 <HSection title="Thanks to our lovely sponsors:" id="sponsors">
 	<div class="flex flex-wrap justify-center gap-30 p-10">
 		{images.map(([image, name, link, classes], _index) => (
-			<a href={link} class="hover-3d w-64">
-				<Picture
-					src={image}
-					alt={`${name} logo`}
-					formats={["avif", "webp"]}
-					fallbackFormat="png"
-					widths={[128, 256, 512]}
-					loading="lazy"
-					decoding="async"
-					sizes="auto, 256px"
-					class={`${classes}`}
-				/>
+			<a href={link} class="card bg-base-300 w-64">
+				<div class="card-body">
+					<Picture
+						src={image}
+						alt={`${name} logo`}
+						formats={["avif", "webp"]}
+						fallbackFormat="png"
+						widths={[128, 256, 512]}
+						loading="lazy"
+						decoding="async"
+						sizes="auto, 256px"
+						class={`${classes}`}
+					/>
+				</div>
 			</a>
 		))}
+		<a
+			href="#contact"
+			class="card card-dash bg-base-200 border-base-content/40 w-64"
+		>
+			<div
+				class="card-body flex-1 items-center justify-center text-xl text-center"
+			>
+				Partner With Us
+			</div>
+		</a>
 	</div>
 </HSection>
