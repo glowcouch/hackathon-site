@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import basestation from "../assets/sponsors/basestation.png";
 import HSection from "../components/HSection.astro";
 
@@ -13,7 +13,17 @@ const images: [ImageMetadata, string, string, string][] = [
 	<div class="flex flex-wrap justify-center gap-30 p-10">
 		{images.map(([image, name, link, classes], _index) => (
 			<a href={link} class="hover-3d w-64">
-				<Image src={image} alt={`${name} logo`} class={`${classes}`} />
+				<Picture
+					src={image}
+					alt={`${name} logo`}
+					formats={["avif", "webp"]}
+					fallbackFormat="png"
+					widths={[128, 256, 512]}
+					loading="lazy"
+					decoding="async"
+					sizes="auto, 256px"
+					class={`${classes}`}
+				/>
 			</a>
 		))}
 	</div>

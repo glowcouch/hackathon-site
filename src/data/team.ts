@@ -1,28 +1,10 @@
-import Joe from "./team/Joe.astro";
+import finn from "../assets/team/finn.webp";
+import Finn from "./team/Finn.astro";
 
 export const team = [
 	{
-		name: "Joe",
-		imgsrc:
-			"https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp",
-		writeup: Joe,
-	},
-	{
-		name: "Joe",
-		imgsrc:
-			"https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp",
-		writeup: Joe,
-	},
-	{
-		name: "Joe",
-		imgsrc:
-			"https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp",
-		writeup: Joe,
-	},
-	{
-		name: "Joe",
-		imgsrc:
-			"https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp",
-		writeup: Joe,
+		name: "Finn",
+		imgsrc: finn,
+		writeup: Finn,
 	},
 ];

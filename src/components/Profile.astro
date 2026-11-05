@@ -1,14 +1,22 @@
 ---
 const { name, imgsrc, imgalt, class: classes } = Astro.props;
+
+import { Picture } from "astro:assets";
 ---
 
 <div class={`card md:card-side bg-base-300 ${classes}`}>
-	<figure class="shrink-0">
-		<img
+	<figure class="shrink-0 md:h-full">
+		<Picture
 			src={imgsrc}
 			alt={imgalt}
+			formats={["avif", "webp"]}
+			fallbackFormat="jpeg"
+			widths={[320, 586, 800, 1172]}
+			loading="lazy"
+			decoding="async"
+			sizes="auto, (min-width: 1024px) 586px, (min-width: 768px) 440px, 100vw"
 			class="aspect-[4/3] md:aspect-[3/4] w-full object-cover lg:aspect-square lg:h-full"
-		>
+		/>
 	</figure>
 	<div class="card-body text-2xl">
 		<h2 class="card-title text-4xl">{name}</h2>

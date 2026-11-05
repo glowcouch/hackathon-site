@@ -1,5 +1,7 @@
 ---
+import { Picture } from "astro:assets";
 import { Icon } from "astro-icon/components";
+import coding_photo from "../assets/coding-photo.jpg";
 import HSection from "../components/HSection.astro";
 import { event } from "../data/data.ts";
 ---
@@ -56,11 +58,18 @@ import { event } from "../data/data.ts";
 			</div>
 		</div>
 		<div class="h-full w-full my-10 lg:my-0">
-			<img
-				src="https://placehold.co/600x400?text=A+sunny+photo+of+the+organizers+coding+at+the+venue"
+			<Picture
+				src={coding_photo}
 				alt={`Teens coding at ${event.venue}`}
+				formats={["avif", "webp"]}
+				fallbackFormat="jpeg"
+				widths={[361, 651, 925, 1400, 1850]}
+				sizes="(min-width: 1024px) 90vw, 100vw"
+				loading="eager"
+				fetchpriority="high"
+				decoding="async"
 				class="w-full h-full object-cover object-[50%_20%]"
-			>
+			/>
 		</div>
 	</div>
 </HSection>
