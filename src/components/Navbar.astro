@@ -50,8 +50,8 @@ const links = [
 				<ul class="menu menu-horizontal px-1">
 					{links.map((link) => (
 						<li>
-							<a href={link.href} data-nav-link class="btn btn-ghost text-xl">
-								{link.label}
+							<a href={link.href} data-nav-link class="btn btn-ghost">
+								<h2>{link.label}</h2>
 							</a>
 						</li>
 					))}
@@ -68,9 +68,9 @@ const links = [
 							href={link.href}
 							data-nav-link
 							aria-label={link.label}
-							class="btn btn-ghost text-xl"
+							class="btn btn-ghost"
 						>
-							{link.label}
+							<h2>{link.label}</h2>
 						</a>
 					</li>
 				))}

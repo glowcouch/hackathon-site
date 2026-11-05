@@ -6,11 +6,7 @@ import HSection from "../components/HSection.astro";
 import { event } from "../data/data.ts";
 ---
 
-<HSection id="intro">
-	<p class="text-4xl md:text-5xl lg:text-7xl text-center">
-		Student run, made for high-schoolers
-	</p>
-	<div class="divider divider-accent" />
+<HSection id="intro" title="Student run, made for high-schoolers">
 	<div class="lg:grid lg:grid-cols-2 lg:gap-10">
 		<div>
 			<br>
@@ -51,7 +47,7 @@ import { event } from "../data/data.ts";
 
 			<br>
 			<div class="flex justify-center md:block md:justify-normal">
-				<a href="/hackathon.ics" download class="btn btn-xl btn-outline">
+				<a href="/hackathon.ics" download class="btn btn-lg btn-outline">
 					<Icon name="lucide:calendar" class="size-5" />
 					Add to calendar
 				</a>

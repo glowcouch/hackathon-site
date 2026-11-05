@@ -54,13 +54,13 @@
 }
 
 @layer base {
+	html {
+		@apply text-lg;
+	}
 	h1 {
-		@apply text-5xl font-bold;
+		@apply text-3xl font-bold;
 	}
 	h2 {
-		@apply text-3xl font-semibold;
-	}
-	h3 {
 		@apply text-xl font-semibold;
 	}
 }

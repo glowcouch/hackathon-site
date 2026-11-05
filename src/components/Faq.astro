@@ -30,7 +30,7 @@ const FAQS = [
 		{FAQS.map(({ question, answer }) => (
 			<div class="collapse bg-base-300">
 				<input type="radio" name={FAQ_GROUP} aria-label={question} />
-				<div class="collapse-title font-semibold text-xl">{question}</div>
+				<h2 class="collapse-title font-semibold">{question}</h2>
 				<div class="collapse-content text-lg">{answer}</div>
 			</div>
 		))}

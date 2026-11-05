@@ -2,9 +2,9 @@
 const { title, class: className, id } = Astro.props;
 ---
 
-<div class={`text-3xl scroll-mt-24 ${className}`} id={id}>
+<div class={`text-lg scroll-mt-24 ${className}`} id={id}>
 	{title && (
-			<h2>{title}</h2>
+			<h1>{title}</h1>
 			<div class="divider divider-accent" />
 	)}
 	<slot />
