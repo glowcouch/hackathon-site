@@ -1,8 +1,8 @@
 ---
-const { title, class: className } = Astro.props;
+const { title, class: className, id } = Astro.props;
 ---
 
-<div class={`text-3xl ${className}`}>
+<div class={`text-3xl ${className}`} id={id}>
 	{title && (
 			<h2>{title}</h2>
 			<div class="divider divider-accent" />
