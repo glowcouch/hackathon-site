@@ -11,23 +11,30 @@ import { event } from "../data/data.ts";
 		<div class="space-y-8">
 			<!-- 1. What it is -->
 			<p class="text-xl">
-				12 hours to make something cool, meet new people, learn something, and
-				have fun. The challenge is revealed on the day 🤫
+				{event.hours}{" "}
+				hours to make something cool, meet new people, learn something, and have
+				fun. The challenge is revealed on the day 🤫
 			</p>
 
 			<!-- 2. Key facts as a real list -->
 			<dl class="grid gap-3 text-lg">
 				<div class="flex gap-3">
 					<dt class="font-semibold min-w-24">Date</dt>
-					<dd class="text-accent">Saturday, 27 February 2027</dd>
+					<dd class="text-accent">
+						{event.start.toLocaleDateString("en-NZ", { dateStyle: "full" })}
+					</dd>
 				</div>
 				<div class="flex gap-3">
 					<dt class="font-semibold min-w-24">Time</dt>
-					<dd class="text-accent">9:00 am</dd>
+					<dd class="text-accent">
+						{event.start.toLocaleTimeString("en-NZ", {
+							timeStyle: "short",
+						})}
+					</dd>
 				</div>
 				<div class="flex gap-3">
 					<dt class="font-semibold min-w-24">Location</dt>
-					<dd class="text-accent">148 Durham Street, Tauranga 3110</dd>
+					<dd class="text-accent">{event.address}</dd>
 				</div>
 			</dl>
 
