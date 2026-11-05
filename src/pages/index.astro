@@ -10,9 +10,8 @@ import { event } from "../data/data.ts";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<!-- TODO: CHANGE THIS DESCRIPTION, IT IS OBVIOUSLY LLM WRITTEN -->
 <Layout
-	description="Join us for a weekend of building, learning and fun. See the event details, meet the team and sign up to take part."
+	description=`A ${event.hours} hour Tauranga hackathon to make something cool, meet new people, learn something, and have fun.`
 >
 	<Banner heading={event.name} subheading="Tauranga's first youth hackathon!" />
 	<Main>
