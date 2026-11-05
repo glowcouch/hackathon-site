@@ -5,43 +5,32 @@ import { event } from "../data/data.ts";
 ---
 
 <header>
-	<div class="relative overflow-clip py-24 h-[60vh] my-20">
+	<div class="overflow-clip py-40 md:py-45">
 		<div
 			class:list={[
-				"absolute",
-				// pin to edges
-				"inset-x-0",
-				// center vertically
-				"top-1/2 -translate-y-1/2",
-				// rotate
 				"-rotate-3",
-				// overscale slightly so it covers everything
 				"scale-110",
-				// scale smaller than parent
-				"h-3/4",
-				// color
 				"bg-primary/80 better-glass",
-				// center the content
-				"flex justify-center",
+				// band padding = slim, but always fits its content
+				"py-6 md:py-8",
+				"flex justify-center items-center",
 			]}
 		>
-			<div
-				class:list={[
-					// scale down so it's the width of the screen
-					"w-[100vw]",
-					// center the content
-					"flex justify-center items-center",
-				]}
-			>
-				<div class="text-center text-shadow-lg">
-					<h1 class="text-[12vw] lg:text-9xl text-accent font-mono">
+			<div class:list={["w-full px-4", "flex justify-center items-center"]}>
+				<div
+					class="flex flex-col items-center gap-2 md:gap-3 text-center text-shadow-lg"
+				>
+					<h1
+						class="text-[12vw] lg:text-8xl text-accent font-mono leading-none"
+					>
 						{heading}
 					</h1>
-					<h2 class="text-[4.5vw] lg:text-6xl text-nowrap">
+					<h2 class="text-[4.5vw] lg:text-5xl leading-tight">
 						{subheading}
 					</h2>
-					<br>
-					<a class="btn btn-accent md:btn-lg" href={event.signUp}>Sign Up!</a>
+					<a class="btn btn-accent md:btn-lg mt-3 md:mt-4" href={event.signUp}>
+						Sign Up!
+					</a>
 				</div>
 			</div>
 		</div>
