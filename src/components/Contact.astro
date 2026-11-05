@@ -1,27 +1,29 @@
 ---
+import HSection from "../components/HSection.astro";
 import { contact } from "../data/data.ts";
-
 import Social from "./Social.astro";
 ---
 
-<div class="grid gap-5 md:col-3">
-	<Social icon="lucide:mail" handle={contact.email} subtitle="email us" />
-	<Social
-		icon="simple-icons:discord"
-		handle={contact.discord}
-		subtitle="DM us on Discord"
-		href=`https://discord.com/users/${contact.discord_id}`
-	/>
-	<Social
-		icon="simple-icons:instagram"
-		handle={contact.instagram}
-		subtitle="DM us on Instagram"
-		href=`https://ig.me/m/${contact.instagram}`
-	/>
-	<Social
-		icon="simple-icons:github"
-		handle={contact.github}
-		subtitle="find our code on github"
-		href=`https://github.com/${contact.github}`
-	/>
-</div>
+<HSection title="Contact us!">
+	<div class="grid gap-5 lg:grid-cols-2">
+		<Social icon="lucide:mail" handle={contact.email} subtitle="email us" />
+		<Social
+			icon="simple-icons:discord"
+			handle={contact.discord}
+			subtitle="DM us on Discord"
+			href=`https://discord.com/users/${contact.discord_id}`
+		/>
+		<Social
+			icon="simple-icons:instagram"
+			handle={contact.instagram}
+			subtitle="DM us on Instagram"
+			href=`https://ig.me/m/${contact.instagram}`
+		/>
+		<Social
+			icon="simple-icons:github"
+			handle={contact.github}
+			subtitle="find our code on github"
+			href=`https://github.com/${contact.github}`
+		/>
+	</div>
+</HSection>
