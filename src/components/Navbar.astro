@@ -11,19 +11,21 @@ const links = [
 ];
 ---
 
-<nav class="md:sticky md:top-0 z-50">
-	<div class="max-lg:collapse bg-base-300 shadow-sm w-full rounded-md">
-		<input id="navbar-1-toggle" class="peer hidden" type="checkbox">
-		<label
-			for="navbar-1-toggle"
-			class="fixed inset-0 hidden max-lg:peer-checked:block"
-			><span class="sr-only">Menu</span></label
-		>
+<nav class="sticky top-0 z-50">
+	<div
+		id="mobile-menu"
+		class="group max-lg:collapse max-lg:target:collapse-open scroll-mt-0 bg-base-300 shadow-sm w-full rounded-md"
+	>
+		<!-- backdrop: only exists while the menu is open; closes it without scrolling -->
+		<a href="#!" class="fixed inset-0 hidden max-lg:group-target:block">
+			<span class="sr-only">Close menu</span>
+		</a>
+
 		<div class="collapse-title navbar">
 			<div class="navbar-start">
-				<label for="navbar-1-toggle" class="btn btn-ghost lg:hidden">
+				<a href="#mobile-menu" class="btn btn-ghost lg:hidden">
 					<svg
-						aria-label="Menu"
+						aria-hidden="true"
 						xmlns="http://www.w3.org/2000/svg"
 						class="h-5 w-5"
 						fill="none"
@@ -38,7 +40,7 @@ const links = [
 						/>
 					</svg>
 					<span class="sr-only">Open menu</span>
-				</label>
+				</a>
 				<a class="btn btn-ghost text-4xl text-accent font-mono" href="/">
 					<Icon name="logo" class="mr-4"></Icon>
 					{event.name}
