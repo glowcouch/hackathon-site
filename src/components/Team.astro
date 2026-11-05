@@ -5,9 +5,7 @@ import Profile from "./Profile.astro";
 ---
 
 <HSection title="Our team:">
-	<div
-		class="carousel carousel-left lg:carousel-center space-x-4 h-[90vh] md:h-[70vh] lg:h-[50vh] w-full"
-	>
+	<div class="carousel carousel-left lg:carousel-center space-x-4  w-full">
 		{team.map((member) => (
 			<Profile
 				name={member.name}
