@@ -39,7 +39,6 @@ document
 		const encoded = handle.dataset.encoded;
 		if (!encoded) return;
 
-		console.log(encoded);
 		const decrypted = atob(encoded);
 		handle.textContent = decrypted;
 	});
@@ -49,7 +48,6 @@ document.querySelectorAll<HTMLAnchorElement>(".social-link").forEach((a) => {
 	const encoded = a.dataset.encoded;
 	if (!encoded) return;
 
-	console.log(encoded);
 	const decrypted = atob(encoded);
 	a.href = decrypted;
 });
