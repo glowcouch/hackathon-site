@@ -1,7 +1,22 @@
 ---
-const { name, imgsrc, imgalt, class: classes } = Astro.props;
+interface Social {
+	name: string;
+	href: string;
+	icon: string;
+}
+
+interface Props {
+	name: string;
+	imgsrc: ImageMetadata;
+	imgalt: string;
+	class?: string;
+	socials: Social[];
+}
+
+const { name, imgsrc, imgalt, class: classes, socials } = Astro.props;
 
 import { Picture } from "astro:assets";
+import { Icon } from "astro-icon/components";
 ---
 
 <div class={`card md:card-side bg-base-300 ${classes}`}>
@@ -21,8 +36,22 @@ import { Picture } from "astro:assets";
 			pictureAttributes={{ class: "object-cover w-full h-full" }}
 		/>
 	</figure>
-	<div class="card-body text-base">
+	<div class="card-body">
 		<h2 class="card-title">{name}</h2>
 		<slot />
+		<div class="text-2xl absolute bottom-6 right-6 flex gap-2">
+			{socials.map((social) => (
+				<a
+					data-encoded={btoa(social.href)}
+					data-encoded-attr="href"
+					href="loading"
+				>
+					<Icon name={social.icon} />
+					<span class="sr-only" data-encoded={btoa(social.name)}>
+						loading
+					</span>
+				</a>
+			))}
+		</div>
 	</div>
 </div>

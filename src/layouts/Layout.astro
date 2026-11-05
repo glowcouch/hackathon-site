@@ -31,6 +31,9 @@ const speculationRules = {
 		<title>{event.name}</title>
 		<meta name="description" content={description}>
 
+		<!-- a script that decodes base64 encoded text in the browser to stop scraping -->
+		<script src="../scripts/scrapeProtection.ts" />
+
 		<!-- preload fonts to avoid unstyled flash -->
 		<link
 			rel="preload"
