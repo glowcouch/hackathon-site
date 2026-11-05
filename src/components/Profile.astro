@@ -6,7 +6,7 @@ import { Picture } from "astro:assets";
 
 <div class={`card md:card-side bg-base-300 ${classes}`}>
 	<figure
-		class="shrink-0 aspect-[4/3] md:aspect-[3/4] lg:aspect-square w-full md:w-auto md:h-full"
+		class="shrink-0 aspect-[4/3] md:aspect-[3/4] w-full md:w-auto md:h-full"
 	>
 		<Picture
 			src={imgsrc}
@@ -21,7 +21,7 @@ import { Picture } from "astro:assets";
 			pictureAttributes={{ class: "object-cover w-full h-full" }}
 		/>
 	</figure>
-	<div class="card-body text-xl">
+	<div class="card-body text-base">
 		<h2 class="card-title text-3xl">{name}</h2>
 		<slot />
 	</div>
