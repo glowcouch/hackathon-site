@@ -1,4 +1,4 @@
-const domain = "hackaberry.com";
+const domain = "hackberry.com";
 const url = `https://${domain}`;
 const start = new Date("2027-02-27T09:00:00+13:00");
 const end = new Date("2027-02-28T09:00:00+13:00");
@@ -6,9 +6,9 @@ const hours = 12;
 
 // event details
 export const event = {
-	name: "Hackaberry",
+	name: "Hackberry",
 	url: url,
-	uid: "hackaberry-2027@example.com",
+	uid: "hackberry-2027@example.com",
 	address: "148 Durham Street, Tauranga 3110",
 	venue: "Basestation",
 	start: start,
