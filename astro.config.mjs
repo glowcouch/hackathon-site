@@ -13,4 +13,7 @@ export default defineConfig({
 		inlineStylesheets: "always",
 	},
 	integrations: [icon()],
+
+	site: "https://glowcouch.github.io",
+	base: "/hackathon-site",
 });
