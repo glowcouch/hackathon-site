@@ -14,6 +14,5 @@ export default defineConfig({
 	},
 	integrations: [icon()],
 
-	site: "https://glowcouch.github.io",
-	base: "/hackathon-site",
+	site: "https://hackberry.nz",
 });
